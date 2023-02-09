@@ -27,7 +27,6 @@ export default function App() {
   }
 
   function updateNote(text) {
-    // Put the most recently-modified note at the top
     setNotes((oldNotes) => {
       const newArray = [];
       for (let i = 0; i < oldNotes.length; i++) {
@@ -58,7 +57,7 @@ export default function App() {
   return (
     <main>
       {notes.length > 0 ? (
-        <Split sizes={[30, 70]} direction="horizontal" className="split">
+        <Split sizes={[20, 80]} direction="horizontal" className="split">
           <Sidebar
             notes={notes}
             currentNote={findCurrentNote()}
